@@ -9,7 +9,7 @@
 makeCacheMatrix <- function(x = matrix()) {
   matrixInverse <- NULL ## creates an empty matrix
   setMatrix <- function(y) { ## mutator function that sets the matrix value
-    myMatrix <<- y
+    myMatrix <<- y ## assigns value to global mariable myMatrix
     matrixInverse <<- NULL
   }
   getMatrix <- function() myMatrix ## accessor function
@@ -30,7 +30,7 @@ cacheSolve <- function(x, ...) {
   theInverse <- x$getMatrixInverse()
   if(!is.null(theInverse)) { ## checks to see if there is an inverse
     message("Getting cached data")
-    return(theInverse) ## returns the cached invers
+    return(theInverse) ## returns the cached inverse
   }
   theMatrix <- x$getMatrix() ## returns the matrix
   theInverse <- solve(theMatrix) ## calculates the inverse
