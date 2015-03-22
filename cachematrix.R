@@ -9,7 +9,7 @@
 makeCacheMatrix <- function(x = matrix()) {
   matrixInverse <- NULL ## creates an empty matrix
   setMatrix <- function(y) { ## mutator function that sets the matrix value
-    myMatrix <<- y ## assigns value to global mariable myMatrix
+    myMatrix <<- y ## assigns value to global variable myMatrix
     matrixInverse <<- NULL
   }
   getMatrix <- function() myMatrix ## accessor function
